@@ -112,7 +112,7 @@ export const Login: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your username or email"
                 required
-                className="w-full"
+                className="w-full bg-white border border-black-200 focus:outline-none focus:border-black"
               />
             </div>
 
@@ -128,7 +128,7 @@ export const Login: React.FC = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
                   required
-                  className="w-full pr-10"
+                  className="w-full  bg-white border border-black-200"
                 />
                 <button
                   type="button"

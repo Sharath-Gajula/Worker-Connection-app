@@ -9,7 +9,8 @@
     /* Base colors */
     --background: 248 250 252;
     --foreground: 226 26% 14%;
-
+     
+    
     /* Card system */
     --card: 0 0% 100%;
     --card-foreground: 226 26% 14%;
@@ -161,8 +162,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
+    /* @apply bg-background text-foreground; */
+}
 
   html {
     scroll-behavior: smooth;

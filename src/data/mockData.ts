@@ -1,5 +1,7 @@
 import { User } from '../contexts/AuthContext';
 
+// is for testing the backend intgeration of pending approved of customer and worker
+
 export interface Booking {
   id: string;
   customerId: string;

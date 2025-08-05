@@ -175,7 +175,8 @@ export const Search: React.FC = () => {
               placeholder="Search by name, profession, or skills..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 h-12 text-lg"
+              className="pl-10 h-12 text-lg w-full bg-white border border-black-200 focus:outline-none focus:border-black"
+              
             />
           </div>
 
@@ -190,7 +191,7 @@ export const Search: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Profession</label>
                 <Select value={selectedProfession} onValueChange={setSelectedProfession}>
-                  <SelectTrigger>
+                  <SelectTrigger className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'>
                     <SelectValue placeholder="All Professions" />
                   </SelectTrigger>
                   <SelectContent>
@@ -206,7 +207,7 @@ export const Search: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
                 <Select value={selectedLocation} onValueChange={setSelectedLocation}>
-                  <SelectTrigger>
+                  <SelectTrigger className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'>
                     <SelectValue placeholder="All Locations" />
                   </SelectTrigger>
                   <SelectContent>
@@ -222,10 +223,10 @@ export const Search: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Min Rating</label>
                 <Select value={minRating.toString()} onValueChange={(value) => setMinRating(Number(value))}>
-                  <SelectTrigger>
+                  <SelectTrigger className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'>
                     <SelectValue placeholder="Any Rating" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent >
                     <SelectItem value="0">Any Rating</SelectItem>
                     <SelectItem value="3">3+ Stars</SelectItem>
                     <SelectItem value="4">4+ Stars</SelectItem>
@@ -237,7 +238,7 @@ export const Search: React.FC = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Sort By</label>
                 <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger>
+                  <SelectTrigger className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'>
                     <SelectValue placeholder="Sort By" />
                   </SelectTrigger>
                   <SelectContent>

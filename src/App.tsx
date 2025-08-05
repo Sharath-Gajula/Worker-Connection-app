@@ -12,6 +12,7 @@ import { Search } from "./pages/Search";
 import { About } from "./pages/About";
 import { Bookings } from "./pages/Bookings";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/ProfilePage"; // Ensure this import matches the file structure
 
 const queryClient = new QueryClient();
 
@@ -22,7 +23,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen">
             <Navigation />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -31,8 +32,9 @@ const App = () => (
               <Route path="/register" element={<Register />} />
               <Route path="/search" element={<Search />} />
               <Route path="/bookings" element={<Bookings />} />
+              <Route path="/profile" element={<Profile/>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
+              {/* <Route path="*" element={<NotFound />} /> */}
             </Routes>
           </div>
         </BrowserRouter>

@@ -148,6 +148,7 @@ export const Register: React.FC = () => {
             value={customerData.name}
             onChange={(e) => setCustomerData({...customerData, name: e.target.value})}
             placeholder="Enter your full name"
+            className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
             required
           />
         </div>
@@ -158,6 +159,7 @@ export const Register: React.FC = () => {
             value={customerData.email}
             onChange={(e) => setCustomerData({...customerData, email: e.target.value})}
             placeholder="Enter your email"
+            className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
             required
           />
         </div>
@@ -171,6 +173,7 @@ export const Register: React.FC = () => {
             value={customerData.phone}
             onChange={(e) => setCustomerData({...customerData, phone: e.target.value})}
             placeholder="+91 XXXXX XXXXX"
+            className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
             required
           />
         </div>
@@ -181,6 +184,7 @@ export const Register: React.FC = () => {
             value={customerData.location}
             onChange={(e) => setCustomerData({...customerData, location: e.target.value})}
             placeholder="City, State"
+            className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
             required
           />
         </div>
@@ -195,6 +199,7 @@ export const Register: React.FC = () => {
               value={customerData.password}
               onChange={(e) => setCustomerData({...customerData, password: e.target.value})}
               placeholder="Create a password"
+              className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
               required
               minLength={8}
             />
@@ -214,6 +219,7 @@ export const Register: React.FC = () => {
             value={customerData.confirmPassword}
             onChange={(e) => setCustomerData({...customerData, confirmPassword: e.target.value})}
             placeholder="Confirm your password"
+            className='w-full bg-white border border-black-200  rounded-md focus:outline-none focus:ring-0'
             required
           />
         </div>
@@ -241,6 +247,7 @@ export const Register: React.FC = () => {
                     setWorkerData({...workerData, name: `${e.target.value} ${lastName}`.trim()});
                   }}
                   placeholder="First name"
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                   required
                 />
               </div>
@@ -254,6 +261,7 @@ export const Register: React.FC = () => {
                     setWorkerData({...workerData, name: `${firstName} ${e.target.value}`.trim()});
                   }}
                   placeholder="Last name"
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                   required
                 />
               </div>
@@ -261,9 +269,9 @@ export const Register: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Profession</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2 ">Profession</label>
                 <Select value={workerData.profession} onValueChange={(value) => setWorkerData({...workerData, profession: value})}>
-                  <SelectTrigger>
+                  <SelectTrigger className='bg-white border border-black-200 focus:outline-none focus:border-black'>
                     <SelectValue placeholder="Select your profession" />
                   </SelectTrigger>
                   <SelectContent>
@@ -285,6 +293,7 @@ export const Register: React.FC = () => {
                   onChange={(e) => setWorkerData({...workerData, experience: e.target.value})}
                   placeholder="Years of experience"
                   required
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                 />
               </div>
             </div>
@@ -296,6 +305,7 @@ export const Register: React.FC = () => {
                 value={workerData.location}
                 onChange={(e) => setWorkerData({...workerData, location: e.target.value})}
                 placeholder="City, State"
+                className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                 required
               />
             </div>
@@ -313,6 +323,7 @@ export const Register: React.FC = () => {
                   value={workerData.email}
                   onChange={(e) => setWorkerData({...workerData, email: e.target.value})}
                   placeholder="Enter your email"
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                   required
                 />
               </div>
@@ -323,6 +334,7 @@ export const Register: React.FC = () => {
                   value={workerData.phone}
                   onChange={(e) => setWorkerData({...workerData, phone: e.target.value})}
                   placeholder="+91 XXXXX XXXXX"
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                   required
                 />
               </div>
@@ -334,6 +346,7 @@ export const Register: React.FC = () => {
                 value={workerData.bio}
                 onChange={(e) => setWorkerData({...workerData, bio: e.target.value})}
                 placeholder="Tell us about yourself and your work experience..."
+                className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                 rows={4}
                 required
               />
@@ -346,6 +359,8 @@ export const Register: React.FC = () => {
                 value={workerData.skills}
                 onChange={(e) => setWorkerData({...workerData, skills: e.target.value})}
                 placeholder="e.g., Pipe Fitting, Leak Repair, Installation"
+                className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
+
                 required
               />
             </div>
@@ -364,6 +379,7 @@ export const Register: React.FC = () => {
                     value={workerData.password}
                     onChange={(e) => setWorkerData({...workerData, password: e.target.value})}
                     placeholder="Create a password"
+                    className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                     required
                     minLength={8}
                   />
@@ -383,6 +399,7 @@ export const Register: React.FC = () => {
                   value={workerData.confirmPassword}
                   onChange={(e) => setWorkerData({...workerData, confirmPassword: e.target.value})}
                   placeholder="Confirm your password"
+                  className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                   required
                 />
               </div>
@@ -395,6 +412,7 @@ export const Register: React.FC = () => {
                 value={workerData.aadharNumber}
                 onChange={(e) => setWorkerData({...workerData, aadharNumber: e.target.value})}
                 placeholder="XXXX-XXXX-XXXX"
+                className='w-full bg-white border border-black-200 focus:outline-none focus:border-black'
                 required
               />
             </div>
